@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easel & Ease: Websites for artists, by an artist</title>
+<meta name="description" content="Easel and Ease builds and maintains websites for local artists across California, with custom portfolio sites and live booking, kept up to date by a working artist who handles the tech so you don't have to.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#1C2B14',
+          forest: '#27500A',
+          moss: '#639922',
+          sage: '#97C459',
+          canvas: '#EAF3DE',
+          paper: '#F4F7EE',
+          amber: '#BA7517',
+        },
+        fontFamily: {
+          serif: ['Georgia', 'Cambria', 'serif'],
+          script: ['Marck Script', 'cursive'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { background-color: #F4F7EE; }
+  .hand-line { stroke: #27500A; stroke-width: 5; stroke-linecap: round; fill: none; }
+  .easel-tilt { transform: rotate(-3deg); }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-up { animation: fadeUp .7s ease-out both; }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform: translateY(0);} }
+  }
+  :focus-visible { outline: 3px solid #BA7517; outline-offset: 2px; }
+</style>
+</head>
+<body class="text-ink font-sans antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-sage/40">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <svg width="40" height="40" viewBox="0 0 80 150" aria-hidden="true">
+        <line x1="20" y1="10" x2="0" y2="130" class="hand-line"/>
+        <line x1="60" y1="10" x2="80" y2="130" class="hand-line"/>
+        <line x1="6" y1="95" x2="74" y2="95" class="hand-line"/>
+        <line x1="40" y1="2" x2="40" y2="150" class="hand-line"/>
+        <rect x="10" y="20" width="60" height="58" rx="3" fill="#EAF3DE" stroke="#27500A" stroke-width="3"/>
+        <text x="29" y="40" font-family="'Marck Script',cursive" font-size="32" fill="#27500A" text-anchor="middle" dominant-baseline="central">E</text>
+        <text x="51" y="58" font-family="'Marck Script',cursive" font-size="32" fill="#639922" text-anchor="middle" dominant-baseline="central">E</text>
+      </svg>
+      <span class="font-serif text-xl leading-tight">
+        <span class="block text-forest">Easel</span>
+        <span class="block text-moss -mt-1">&amp; Ease</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/80">
+      <a href="#how" class="hover:text-forest transition-colors">How it works</a>
+      <a href="#services" class="hover:text-forest transition-colors">Services</a>
+      <a href="#work" class="hover:text-forest transition-colors">Work</a>
+      <a href="#about" class="hover:text-forest transition-colors">About</a>
+    </nav>
+    <a href="#contact" class="bg-forest text-paper px-5 py-2.5 rounded-full text-sm font-medium hover:bg-moss transition-colors">
+      Book a consult
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-6 pt-16 pb-20 grid md:grid-cols-2 gap-12 items-center">
+  <div class="fade-up">
+    <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber mb-4">Websites for artists, by an artist</p>
+    <h1 class="font-serif text-4xl sm:text-5xl leading-tight text-forest">
+      Your art is custom.<br>
+      <span class="text-moss">Your website should be too.</span>
+    </h1>
+    <p class="mt-6 text-lg text-ink/80 max-w-md">
+      I build custom portfolio sites for working artists across California, with live booking built in, and I keep everything running so you never have to think about it again.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="#contact" class="bg-forest text-paper px-6 py-3 rounded-full font-medium hover:bg-moss transition-colors">
+        Start with a free consult
+      </a>
+      <a href="#work" class="px-6 py-3 rounded-full font-medium border border-forest/30 text-forest hover:border-forest transition-colors">
+        See the work
+      </a>
+    </div>
+  </div>
+
+  <div class="relative flex justify-center fade-up" style="animation-delay:.15s">
+    <div class="easel-tilt bg-white rounded-sm shadow-xl p-3 w-72 sm:w-80">
+      <div class="aspect-[4/5] bg-canvas rounded-sm overflow-hidden flex items-center justify-center border border-sage/50">
+        <div class="text-center px-6">
+          <p class="font-script text-3xl text-forest mb-2">TatsByTris</p>
+          <p class="text-xs uppercase tracking-widest text-moss mb-4">Tattoo portfolio + booking</p>
+          <p class="text-sm text-ink/70">Live gallery, Google Calendar booking, monthly maintenance. Built from scratch.</p>
+        </div>
+      </div>
+    </div>
+    <svg class="absolute -bottom-6 -left-6 w-24 h-24 text-sage/60 hidden sm:block" viewBox="0 0 100 100" aria-hidden="true">
+      <line x1="20" y1="10" x2="5" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="60" y1="10" x2="80" y2="90" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="10" y1="60" x2="75" y2="60" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="bg-canvas py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="font-serif text-3xl text-forest mb-2">How it works</h2>
+    <p class="text-ink/70 mb-12 max-w-xl">Four steps, start to finish. You send what you have, and I handle the rest.</p>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <p class="font-script text-3xl text-amber mb-2">1</p>
+        <h3 class="font-medium mb-1">Tell me about you</h3>
+        <p class="text-sm text-ink/70">A short form for your bio, photos, and booking details. No blank-page pressure.</p>
+      </div>
+      <div>
+        <p class="font-script text-3xl text-amber mb-2">2</p>
+        <h3 class="font-medium mb-1">I build your site</h3>
+        <p class="text-sm text-ink/70">A custom portfolio, designed around your work, not a template.</p>
+      </div>
+      <div>
+        <p class="font-script text-3xl text-amber mb-2">3</p>
+        <h3 class="font-medium mb-1">I launch it</h3>
+        <p class="text-sm text-ink/70">Live, booking-ready, and connected to your calendar.</p>
+      </div>
+      <div>
+        <p class="font-script text-3xl text-amber mb-2">4</p>
+        <h3 class="font-medium mb-1">I keep it running</h3>
+        <p class="text-sm text-ink/70">New work uploaded, small edits handled. You focus on your art.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 max-w-6xl mx-auto px-6">
+  <h2 class="font-serif text-3xl text-forest mb-2">Pick a tier</h2>
+  <p class="text-ink/70 mb-12 max-w-xl">Fixed packages, not a negotiation. Exact pricing is confirmed during your free consult based on what you need.</p>
+  <div class="grid md:grid-cols-2 gap-6 max-w-3xl">
+    <div class="border-2 border-forest rounded-lg p-8 bg-white relative">
+      <p class="absolute -top-3 left-8 bg-amber text-paper text-xs uppercase tracking-wider px-3 py-1 rounded-full">Most popular</p>
+      <p class="font-script text-2xl text-forest mb-1">The Artist Tier</p>
+      <p class="text-sm text-ink/60 mb-6">For artists taking regular bookings</p>
+      <ul class="text-sm text-ink/80 space-y-2 mb-6">
+        <li>Full portfolio site</li>
+        <li>Google Calendar booking</li>
+        <li>Monthly maintenance &amp; uploads</li>
+      </ul>
+      <a href="#contact" class="text-forest font-medium text-sm hover:text-moss">Ask about this tier →</a>
+    </div>
+    <div class="border border-sage/50 rounded-lg p-8 bg-white">
+      <p class="font-script text-2xl text-forest mb-1">The Studio</p>
+      <p class="text-sm text-ink/60 mb-6">For established artists ready to grow</p>
+      <ul class="text-sm text-ink/80 space-y-2 mb-6">
+        <li>Everything in the Artist Tier</li>
+        <li>Auto-updates from Instagram</li>
+        <li>Local SEO setup</li>
+        <li>Social strategy support</li>
+      </ul>
+      <a href="#contact" class="text-forest font-medium text-sm hover:text-moss">Ask about this tier →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="bg-canvas py-20">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div class="easel-tilt bg-white rounded-sm shadow-xl p-3 max-w-sm">
+      <div class="aspect-[4/5] bg-ink rounded-sm flex items-center justify-center">
+        <p class="font-script text-3xl text-sage">TatsByTris</p>
+      </div>
+    </div>
+    <div>
+      <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber mb-3">Case study</p>
+      <h2 class="font-serif text-3xl text-forest mb-4">From no website to fully booked</h2>
+      <p class="text-ink/80 mb-4">Tristen (TatsByTris) had no web presence at all, just an Instagram. I built a dark, moody portfolio site with a live gallery and a booking form connected straight to a calendar, so new clients could find the work and book a session without a single DM.</p>
+      <p class="text-ink/80">Now it's maintained monthly: new pieces uploaded as they're finished, no extra work on their end.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+    <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber mb-3">About</p>
+    <h2 class="font-serif text-3xl text-forest mb-4">Built by an artist, for artists</h2>
+    <p class="text-ink/80 mb-4">I'm Duraan, an artist myself, and the person who'll actually build and run your site. No account managers, no outsourcing. When you reach out, you're working directly with the person doing the work.</p>
+    <p class="text-ink/80">I started Easel &amp; Ease because most working artists I know don't have a website at all. Not because they don't want one, but because the tools (Squarespace, Wix, all of it) feel like one more job on top of their actual job. So I handle it instead.</p>
+  </div>
+  <div class="bg-white border border-sage/50 rounded-lg p-8">
+    <p class="font-script text-2xl text-forest mb-4">A few things I believe</p>
+    <ul class="space-y-3 text-ink/80 text-sm list-disc list-inside marker:text-amber">
+      <li>Your site should look like your work, not a template</li>
+      <li>You shouldn't have to learn web design to have a web presence</li>
+      <li>Maintenance shouldn't be an afterthought</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-forest text-paper py-20">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="font-serif text-3xl mb-4">Let's build something custom</h2>
+    <p class="text-paper/80 mb-8 max-w-lg mx-auto">Tell me a bit about your work and what you need, and I'll set up a free consult to go from there.</p>
+    <a href="mailto:contact@easelandease.com?subject=Let%27s%20build%20my%20site" class="inline-block bg-amber text-paper px-8 py-4 rounded-full font-medium hover:bg-sage hover:text-forest transition-colors">
+      Email contact@easelandease.com
+    </a>
+    <p class="text-paper/60 text-xs mt-4">Online booking link coming soon. For now, email gets a reply within 1 to 2 business days.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-sm text-ink/60">
+  <p>&copy; <span id="year"></span> Easel &amp; Ease. Websites for artists, by an artist.</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
