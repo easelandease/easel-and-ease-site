@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -69,7 +71,7 @@
       <a href="#work" class="hover:text-forest transition-colors">Work</a>
       <a href="#about" class="hover:text-forest transition-colors">About</a>
     </nav>
-    <a href="#contact" class="bg-forest text-paper px-5 py-2.5 rounded-full text-sm font-medium hover:bg-moss transition-colors">
+    <a href="https://calendly.com/contact-easelandease/30min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-easelandease/30min'});return false;" class="bg-forest text-paper px-5 py-2.5 rounded-full text-sm font-medium hover:bg-moss transition-colors">
       Book a consult
     </a>
   </div>
@@ -87,7 +89,7 @@
       I build custom portfolio sites for working artists across California, with live booking built in, and I keep everything running so you never have to think about it again.
     </p>
     <div class="mt-8 flex flex-wrap gap-4">
-      <a href="#contact" class="bg-forest text-paper px-6 py-3 rounded-full font-medium hover:bg-moss transition-colors">
+      <a href="https://calendly.com/contact-easelandease/30min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-easelandease/30min'});return false;" class="bg-forest text-paper px-6 py-3 rounded-full font-medium hover:bg-moss transition-colors">
         Start with a free consult
       </a>
       <a href="#work" class="px-6 py-3 rounded-full font-medium border border-forest/30 text-forest hover:border-forest transition-colors">
@@ -214,11 +216,13 @@
 <section id="contact" class="bg-forest text-paper py-20">
   <div class="max-w-3xl mx-auto px-6 text-center">
     <h2 class="font-serif text-3xl mb-4">Let's build something custom</h2>
-    <p class="text-paper/80 mb-8 max-w-lg mx-auto">Tell me a bit about your work and what you need, and I'll set up a free consult to go from there.</p>
-    <a href="mailto:contact@easelandease.com?subject=Let%27s%20build%20my%20site" class="inline-block bg-amber text-paper px-8 py-4 rounded-full font-medium hover:bg-sage hover:text-forest transition-colors">
-      Email contact@easelandease.com
-    </a>
-    <p class="text-paper/60 text-xs mt-4">Online booking link coming soon. For now, email gets a reply within 1 to 2 business days.</p>
+    <p class="text-paper/80 mb-2 max-w-lg mx-auto">Tell me a bit about your work and what you need. Pick a time below and I'll talk it through with you.</p>
+    <p class="text-paper/60 text-xs mb-8">Prefer email? Reach me at contact@easelandease.com.</p>
+  </div>
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="bg-paper rounded-lg overflow-hidden">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/contact-easelandease/30min" style="min-width:320px;height:700px;"></div>
+    </div>
   </div>
 </section>
 
